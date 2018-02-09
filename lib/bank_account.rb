@@ -13,16 +13,16 @@ class BankAccount
     @balance += amount
   end
 
+  def display_balance
+    "Your balance is $#{@balance}."
+  end
+
   def valid?
     if balance > 0 && status == "open"
       true
     else
       false
     end
-  end
-
-  def display_balance
-    puts "Your balance is $#{@balance}."
   end
 
   def close_account
